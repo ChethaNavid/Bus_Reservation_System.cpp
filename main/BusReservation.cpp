@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include <unistd.h>
-#include "BusReservationSystem.h"
+#include "../header/BusReservationSystem.h"
 
 using namespace std;
 
@@ -131,7 +131,7 @@ void BusReservationSystem::bookTickets() {
 
 void BusReservationSystem::resetSeats() {
     fill(begin(num1), end(num1), 0); // Reset num1 array
-    fill(begin(name), end(name), "Empty"); // Reset name array
+    fill(begin(name), end(name), "[ ]"); // Reset name array
     fill(begin(phone), end(phone), 0);
 }
 
@@ -262,13 +262,13 @@ void BusReservationSystem::seat(int busNum, int& availableSeats) {
         if (num1[i] != 0) {
             cout << setw(20) << left << name[i];
         } else {
-            cout << setw(20) << left << "Empty";
+            cout << setw(20) << left << "[ ]";
         }
         cout << "\t\t" << setw(2) << right << i + 2 << ". ";
         if (num1[i + 1] != 0) {
             cout << setw(20) << left << name[i + 1];
         } else {
-            cout << setw(20) << left << "Empty";
+            cout << setw(20) << left << "[ ]";
         }
         cout << "\n";
     }
@@ -321,7 +321,7 @@ void BusReservationSystem::cancelBooking() {
             if(phone[i] == phone_num) {
                 seatFound = true;
                 num1[i] = 0;
-                name[i] = "Empty";
+                name[i] = "[ ]";
                 phone[i] = 0;
                 availableSeats++;
                 break;
