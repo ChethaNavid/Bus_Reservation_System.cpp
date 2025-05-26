@@ -51,7 +51,7 @@ void BusReservationSystem::cancelBooking() {
             if(phone[i] == phone_num) {
                 seatFound = true;
                 num1[i] = 0;
-                name[i] = "Empty";
+                name[i] = "[ ]";
                 phone[i] = 0;
                 availableSeats++;
                 break;

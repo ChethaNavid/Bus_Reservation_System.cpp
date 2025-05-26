@@ -30,13 +30,13 @@ void BusReservationSystem::seat(int busNum, int& availableSeats) {
         if (num1[i] != 0) {
             cout << setw(20) << left << name[i];
         } else {
-            cout << setw(20) << left << "Empty";
+            cout << setw(20) << left << "[ ]";
         }
         cout << "\t\t" << setw(2) << right << i + 2 << ". ";
         if (num1[i + 1] != 0) {
             cout << setw(20) << left << name[i + 1];
         } else {
-            cout << setw(20) << left << "Empty";
+            cout << setw(20) << left << "[ ]";
         }
         cout << "\n";
     }
@@ -73,6 +73,6 @@ void BusReservationSystem::status() {
 
 void BusReservationSystem::resetSeats() {
     fill(begin(num1), end(num1), 0); // Reset num1 array
-    fill(begin(name), end(name), "Empty"); // Reset name array
+    fill(begin(name), end(name), "[ ]"); // Reset name array
     fill(begin(phone), end(phone), 0);
 }
