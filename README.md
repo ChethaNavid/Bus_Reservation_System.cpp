@@ -25,7 +25,7 @@ Make sure you have a C++ compiler installed (e.g., g++).
 2. Open the clone repository:
     - cd Bus_Reservation_System
 3. Move to main folder:
-    cd main
+    - cd main
 4. Compile the program:
     - g++ main.cpp BusReservation.cpp -o BusReservationSystem
 5. Run the program:
